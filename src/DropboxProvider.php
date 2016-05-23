@@ -50,7 +50,7 @@ class DropboxProvider extends OAuth2Provider
 
     protected function userId()
     {
-        return $this->getProviderUserData('id');
+        return $this->getProviderUserData('uid');
     }
 
     protected function nickname()
@@ -60,12 +60,12 @@ class DropboxProvider extends OAuth2Provider
 
     protected function fullName()
     {
-        return $this->getProviderUserData('given_name') . ' ' . $this->getProviderUserData('family_name');
+        return $this->getProviderUserData('given_name') . ' ' . $this->getProviderUserData('surname');
     }
 
     protected function avatar()
     {
-        return $this->getProviderUserData('picture');
+        return null; // No avatar returned
     }
 
     protected function email()

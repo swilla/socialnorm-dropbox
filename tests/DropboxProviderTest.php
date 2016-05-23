@@ -45,12 +45,12 @@ class DropboxProviderTest extends TestCase
 
         $user = $provider->getUser();
 
-        $this->assertEquals('103904294571447333816', $user->id);
-        $this->assertEquals('adam.wathan@example.com', $user->nickname);
-        $this->assertEquals('Adam Wathan', $user->full_name);
-        $this->assertEquals('adam.wathan@example.com', $user->email);
-        $this->assertEquals('https://lh3.googleusercontent.com/-w0_RpDnsIE4/AAAAAAAAAAI/AAAAAAAAAKM/NEiV3jig1HA/photo.jpg', $user->avatar);
-        $this->assertEquals('ya29.8xFOTYpQK48RgPH8KjQpSu9SrcANcOQx9JtRnEu52dNsXqai8VD4iY3nFzUBURWnAPeTPtPeIBNjIF', $user->access_token);
+        $this->assertEquals('1308380', $user->id);
+        $this->assertEquals('billy@williams.com', $user->nickname);
+        $this->assertEquals('Billy Williams', $user->display_name);
+        $this->assertEquals('billy@williams.com', $user->email);
+        $this->assertEquals(null, $user->avatar);
+        $this->assertEquals('XLCGq5EmuDkGGGGGGUUIOL4JlCVr_p-7001P7fa2zX3KYbQAEOQm7NDK9rqgw', $user->access_token);
     }
 
     /**
